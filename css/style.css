@@ -1,1 +1,9 @@
+.top{
+  height: 700px;
+  background: grey;
+}
 
+.bottom{
+  height:700px;
+  background: black
+}

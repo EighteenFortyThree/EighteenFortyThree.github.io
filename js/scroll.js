@@ -1,3 +1,4 @@
+// to anywhere
 $('a[href*=#]:not([href=#])').click(function(event) {
     if ( location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
       location.hostname == this.hostname) {
@@ -19,4 +20,11 @@ $('a[href*=#]:not([href=#])').click(function(event) {
         });
       }
     }
+});
+
+// to the top (a tag's href="#")
+$('#toTheTop').click(function(){
+    $('html, body').animate({
+        scrollTop: 0
+    }, 2000);
 });
