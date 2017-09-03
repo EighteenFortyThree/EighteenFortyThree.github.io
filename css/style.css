@@ -1,9 +1,22 @@
-.top{
-  height: 700px;
-  background: grey;
+.logo{
+  float:left;
 }
-
-.bottom{
-  height:700px;
-  background: black
+.options{
+  float: right
+}
+.nav {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  background: powderblue;
+  opacity: .3
+}
+.banner {
+  z-index: -1;
+}
+.bannerImg {
+  width: 100%;
+}
+.about {
+  height: 90%;
 }
