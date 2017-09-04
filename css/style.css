@@ -1,0 +1,104 @@
+/*--------UNIVERSALS-----------*/
+* {
+  margin: 0;
+  padding: 0;
+  /*background-color: #c2d7e1;*/
+}
+
+.divide {
+  height: 50px;
+  width: 100%;
+  background-color: #c2d7e1;
+}
+
+a {
+  color: #fff;
+}
+
+/*--------HEADER-----------*/
+.head-img{
+  background-image: url(../img/1843_720.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+header h1 {
+  text-align: center;
+}
+
+
+/*--------NAV-----------*/
+.nav li {
+  display: inline;
+  color: #fff;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.links {
+  float:right;
+}
+
+/*--------FOUNDER IMG-----------*/
+.founder-img{
+  background-image: url(../img/yosemite.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+
+/*--------FOUNDER-----------*/
+
+
+.founders{
+  margin: 30px;
+}
+
+.meet {
+  height: 300px;
+}
+
+.meet h1 {
+  text-align: center;
+}
+
+/*--------WORK IMG-----------*/
+.work-img{
+  background-image: url(../img/computer.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+
+/*--------WORK-----------*/
+.website {
+  background-color: #000;
+  height: 400px;
+  margin: 20px;
+}
+
+.quote {
+  background-color: #eee;
+  height: 400px;
+  margin: 50px -125px;
+}
+
+/*--------REVIEWS-----------*/
+.review h1 {
+  text-align: center;
+
+}
+
+/*--------FOOTER-----------*/
+footer{
+  height: 250px;
+  background-color: #c2d7e1;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+}
