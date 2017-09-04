@@ -28,3 +28,12 @@ $('#toTheTop').click(function(){
         scrollTop: 0
     }, 2000);
 });
+
+// scroll to top
+$(document).scroll(function() {
+  if ($(this).scrollTop() > $( window ).height()) {
+    $('.upArrow').fadeIn('slow');
+  } else {
+    $('.upArrow').fadeOut(100);
+  }
+});
