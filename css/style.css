@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+
+
 /*--------UNIVERSALS-----------*/
 * {
   margin: 0;
@@ -15,6 +18,30 @@ a {
   color: #fff;
 }
 
+
+.grid{
+  grid-template-columns: 1fr;
+  grid-template-rows: 18, 1fr;
+  grid-template-areas:
+}
+
+/*---------TEXT------------*/
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+h4 {
+  color: #fff;
+  margin: 0 !important;
+  padding: 10px;
+  text-align: center;
+}
+
 /*--------HEADER-----------*/
 .head-img{
   background-image: url(../img/1843_720.png);
@@ -30,6 +57,16 @@ header h1 {
 
 
 /*--------NAV-----------*/
+.nav {
+  display: grid;
+  grid-template-columns: 1, 1fr;
+  grid-template-rows: 2, 1fr;
+  grid-template-areas:
+  "logo"
+  "link"
+  ;
+}
+
 .nav li {
   display: inline;
   color: #fff;
@@ -38,8 +75,22 @@ header h1 {
 }
 
 .links {
-  float:right;
+  grid-area: link;
+  justify-self: center;
+  align-self: center;
 }
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
+
+/*-----------MISSION STATEMENT----------*/
+.mission {
+  margin: 20px;
+}
+
 
 /*--------FOUNDER IMG-----------*/
 .founder-img{
@@ -50,19 +101,66 @@ header h1 {
 }
 
 /*--------FOUNDER-----------*/
-
-
 .founders{
-  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6, 1fr;
+  grid-template-areas:
+  "amanda"
+  "meetamanda"
+  "anna"
+  "meetanna"
+  "rebecca"
+  "meetrebecca"
+  ;
+}
+
+.fimg {
+  margin-top: 30px;
+  height: 400px;
 }
 
 .meet {
-  height: 300px;
+  margin: 0 30px 30px 30px;
+  grid-area: meet;
+  justify-self: center;
+  align-self: center;
 }
 
 .meet h1 {
   text-align: center;
 }
+
+.amanda {
+  grid-area: amanda;
+  justify-self: center;
+  align-self: center;}
+
+.meetamanda {
+  grid-area: meetamanda;
+}
+
+.anna {
+  grid-area: anna;
+  justify-self: center;
+  align-self: center;
+}
+
+.meetanna {
+  grid-area: meetanna;
+}
+
+.rebecca {
+  grid-area: rebecca;
+  justify-self: center;
+  align-self: center;
+}
+
+.meetrebecca {
+  grid-area: meetrebecca;
+}
+
+
 
 /*--------WORK IMG-----------*/
 .work-img{
@@ -73,17 +171,42 @@ header h1 {
 }
 
 /*--------WORK-----------*/
+.work {
+  display: grid;
+  grid-template-columns: 2, 1fr ;
+  grid-template-rows: 2, 1fr;
+  grid-template-areas:
+  "review review"
+  "website quote"
+  ;
+
+}
+
 .website {
   background-color: #000;
   height: 400px;
-  margin: 20px;
+  width: 500px;
+  margin: 20px 0 20px 20px;
+  grid-area: website;
 }
 
 .quote {
   background-color: #eee;
   height: 400px;
-  margin: 50px -125px;
+  margin: 40px 20px 0px -200px;
+  grid-area: quote;
 }
+
+.quote p {
+  margin: 0px 30px;
+  text-overflow: scroll;
+}
+
+.review {
+  grid-area: review;
+  margin: 10px 40px;
+}
+
 
 /*--------REVIEWS-----------*/
 .review h1 {
@@ -91,14 +214,143 @@ header h1 {
 
 }
 
-/*--------FOOTER-----------*/
-footer{
-  height: 250px;
-  background-color: #c2d7e1;
+/*--------CONTACT FORM-----------*/
+.contactform {
+  margin: 40px;
 }
 
 
 
-@media only screen and (max-width: 768px) {
+/*--------FOOTER-----------*/
+footer{
+  height: 250px;
+  background-color: #c2d7e1;
+  color: #fff;
+}
+
+.toplink {
+  position: absolute;
+  left: 47%;
+  margin-top: -25px;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.contactinfo {
+  margin:40px;
+  padding-top: 50px;
+}
+
+
+
+@media only screen and (min-width: 850px) {
+  /*----------NAV-------------------*/
+  .nav {
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    grid-template-rows: 1, 1fr;
+    grid-template-areas:
+    "logo . link"
+    ;
+  }
+
+  .nav li {
+    display: inline;
+    color: #fff;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .links {
+    grid-area: link;
+    align-self: flex-end;
+    justify-self: right;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: left;
+  }
+
+  /*===================FOUNDERS===========*/
+  .founders{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 3, 1fr;
+    grid-template-areas:
+    "amanda meetamanda "
+    "meetanna anna"
+    "rebecca meetrebecca"
+    ;
+  }
+
+  .amanda {
+    grid-area: amanda;
+
+  }
+
+  .meetamanda {
+    grid-area: meetamanda;
+
+  }
+
+  .anna {
+    grid-area: anna;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .meetanna {
+    grid-area: meetanna;
+
+  }
+
+  .rebecca {
+    grid-area: rebecca;
+    margin-bottom: 30px;
+
+  }
+
+  .meetrebecca {
+    grid-area: meetrebecca;
+  }
+
+/*=================WEBSITE WORK ============*/
+  .work {
+    display: grid;
+    grid-template-columns: 3, 1fr ;
+    grid-template-rows: 1, 1fr;
+    grid-template-areas:
+    "website quote review"
+    ;
+
+  }
+
+  .website {
+    background-color: #000;
+    height: 400px;
+    width: 500px;
+    margin: 20px 0 20px 20px;
+    grid-area: website;
+  }
+
+  .quote {
+    background-color: #eee;
+    height: 400px;
+    margin: 50px -10px 0px -200px;
+    grid-area: quote;
+  }
+
+
+  .review {
+    grid-area: review;
+    margin: 10px 40px;
+    justify-content: center;
+    align-self: center;
+  }
+
+
 
 }
