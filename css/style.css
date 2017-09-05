@@ -220,7 +220,27 @@ header h1 {
   margin: 40px;
 }
 
+/* label focus color */
+.input-field input:focus + label {
+  color: #000 !important;
+ }
 
+ /* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #37474f !important;
+  box-shadow: 0 1px 0 0 #37474f !important;
+ }
+
+/* label focus color for textarea */
+ .input-field textarea:focus + label {
+   color: #000 !important;
+ }
+
+/* label underline focus color for textarea */
+ .row .input-field textarea:focus {
+   border-bottom: 1px solid #37474f !important;
+   box-shadow: 0 1px 0 0 #37474f !important;
+ }
 
 /*--------FOOTER-----------*/
 footer{

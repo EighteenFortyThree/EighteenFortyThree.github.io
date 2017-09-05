@@ -6,6 +6,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -84,10 +85,38 @@
     </div>
   </div>
   <div class="divide">
-    <h4>Contact us:</h4>
+    <h4>Contact Us:</h4>
   </div>
+  <!-- Contact Form Begins -->
   <div class="contactform">
-    <p>*Contact form goes here*</p>
+    <div class="row">
+      <form class="col s12" id="emailForm" method="POST">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" type="text" class="validate" required>
+            <label for="name" class="blue-grey-text darken-4">Name:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" required>
+            <label for="email" class="blue-grey-text darken-4">Email:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="message" class="materialize-textarea validate" required></textarea>
+            <label for="message" class="blue-grey-text darken-4">Message:</label>
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+    </div>
+  <!-- Contact Form Ends -->
   </div>
   <footer>
     <a href="#"><div>
@@ -105,6 +134,7 @@
 18fortythree@gmail.com </p>
     </div>
   </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/materialize.min.js"></script>
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
