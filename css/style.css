@@ -44,7 +44,7 @@ h4 {
 
 /*--------HEADER-----------*/
 .head-img{
-  background-image: url(../img/1843_720.png);
+  background-image: url(../img/1843a.png);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -57,6 +57,7 @@ header h1 {
 
 
 /*--------NAV-----------*/
+
 .nav {
   display: grid;
   grid-template-columns: 1, 1fr;
